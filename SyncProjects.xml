@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<syncProjects>
+	<syncProject name="SyncProject1">
+		<syncSource>
+			<connectionString>Connection string</connectionString>
+			<source isStoredProc="false">View or Stored proc name</source>
+		</syncSource>
+		<syncDestination append="true" sourceKeyField="EmployeeID" destinationKeyField="EmployeeID">
+			<site>http://sharepoint.com/MySite</site>
+			<list>Employees</list>
+		</syncDestination>
+		<columns>
+			<column source="EmployeeID" destination="ID" dataType="Integer"/>
+			<column source="FirstName" destination="First Name" dataType="Text"/>
+			<column source="LastName" destination="Last Name" dataType="Text"/>
+			<column source="Address" destination="Address" dataType="Text"/>
+			<column source="City" destination="City" dataType="Text"/>
+			<column source="Today" destination="Date" dataType="DateTime" timeZone="Central Standard Time"/>
+		</columns>
+	</syncProject>
+</syncProjects>
+
